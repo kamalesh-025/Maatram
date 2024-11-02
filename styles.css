@@ -1,0 +1,372 @@
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container and Header Styling */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: lightseagreen;
+    position: relative;
+}
+
+.title h1 {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.title h1:hover {
+    color: gold;
+}
+
+/* Navigation Links Styling */
+.nav-links a, .login-btn, .signup-btn {
+    color: white;
+    margin-left: 15px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover, .login-btn:hover, .signup-btn:hover {
+    color: gold;
+    transform: scale(1.1);
+}
+
+.login-btn, .signup-btn {
+    background-color: darkcyan;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background-color: teal;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Modal Background */
+.signup-modal, .login-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Modal Content */
+.signup-content, .login-content {
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    animation: slideIn 0.6s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: darkslategray;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: lightseagreen;
+}
+
+/* Role Selection Buttons */
+.role-selection button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: lightseagreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.role-selection button:hover {
+    background-color: darkcyan;
+    transform: scale(1.1);
+}
+
+/* Form Styling */
+.signup-form, .login-content form {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.signup-form input, .login-content form input {
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signup-form input:focus, .login-content form input:focus {
+    border-color: lightseagreen;
+    box-shadow: 0 0 5px rgba(0, 139, 139, 0.4);
+}
+
+.signup-form button, .login-content form button {
+    padding: 10px;
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.signup-form button:hover, .login-content form button:hover {
+    background-color: teal;
+    transform: scale(1.05);
+}
+
+/* Hidden Class for Forms */
+.hidden {
+    display: none;
+}
+.home {
+    background-color: #f0f8ff; /* Light background color */
+    padding: 20px; /* Add some padding */
+    border-radius: 8px; /* Rounded corners */
+    animation: fadeIn 2s; /* Animation for fade-in effect */
+}
+
+.welcome-text {
+    font-size: 2.5em; /* Large font size for the title */
+    font-family: 'Arial', sans-serif; /* Font variant */
+    color: #ff6347; /* Tomato color for the text */
+    text-align: center; /* Centered text */
+    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347; /* Glowing effect */
+    animation: glow 1.5s infinite alternate; /* Glowing animation */
+}
+
+.mission-statement {
+    font-size: 1.2em; /* Font size for paragraph */
+    font-family: 'Georgia', serif; /* Different font variant for paragraphs */
+    color: #333; /* Darker text color */
+    line-height: 1.6; /* Line height for better readability */
+    margin-top: 20px; /* Space between heading and paragraph */
+    text-align: justify;
+}
+
+/* Keyframes for fadeIn effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for glow effect */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px yellow, 0 0 20px yellow;
+    }
+    to {
+        text-shadow: 0 0 20px yellow, 0 0 30px yellow;
+    }
+}
+.aboutus {
+    background-color: #e6f7ff; /* Light blue background */
+    padding: 20px; /* Padding around the content */
+    border-radius: 8px; /* Rounded corners */
+    animation: fadeInUp 1s ease-in-out; /* Animation effect */
+    text-align: center; /* Centered text alignment */
+    margin: 20px 0; /* Margin to separate it from other sections */
+}
+
+.aboutus h2 {
+    font-size: 2em; /* Font size for the heading */
+    color: #2c3e50; /* Dark color for the heading */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.aboutus p {
+    font-size: 1.2em; /* Font size for the paragraph */
+    color: #34495e; /* Darker text color for the paragraph */
+    line-height: 1.6; /* Line height for better readability */
+    max-width: 800px; /* Max width for paragraph to avoid too long lines */
+    margin: 0 auto; /* Center the paragraph within the container */
+}
+
+/* Keyframes for fadeInUp effect */
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1; /* End fully opaque */
+        transform: translateY(0); /* End at normal position */
+    }
+}
+hr {
+    border: none; /* Remove default border */
+    height: 2px; /* Set the height of the line */
+    background-color: #2c3e50; /* Set the color of the line */
+    margin: 20px 0; /* Optional: Add space above and below the line */
+}
+.help {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background with opacity */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px 0; /* Space around the section */
+    animation: fadeIn 1s ease-in-out; /* Animation for the section */
+    text-align: left; /* Left-aligned text */
+}
+
+.help-title {
+    font-size: 2em; /* Large font size for the main title */
+    color: #2c3e50; /* Dark text color */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.help-intro {
+    font-size: 1.2em; /* Introductory text size */
+    color: #34495e; /* Slightly lighter color */
+    margin-bottom: 20px; /* Space below the intro */
+}
+
+.faq-title, .contact-title {
+    font-size: 1.5em; /* Font size for section titles */
+    color: #2980b9; /* Color for section titles */
+    margin-top: 20px; /* Space above the section titles */
+}
+
+.faq-item {
+    margin: 10px 0; /* Space between FAQ items */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.faq-question {
+    font-size: 1.2em; /* Font size for questions */
+    color: #2c3e50; /* Dark color for questions */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.faq-answer {
+    font-size: 1em; /* Font size for answers */
+    color: #34495e; /* Lighter text color */
+    display: none; /* Hidden by default */
+    margin: 5px 0 10px 0; /* Space below the answer */
+}
+
+/* Show answer on hover (optional) */
+.faq-item:hover {
+    background-color: #f0f8ff; /* Light blue background on hover */
+}
+
+.faq-item:hover .faq-answer {
+    display: block; /* Show answer when hovering over the question */
+}
+
+.contact-info, .contact-email, .contact-phone {
+    font-size: 1em; /* Font size for contact info */
+    color: #34495e; /* Dark color for contact text */
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start transparent */
+        transform: translateY(20px); /* Start lower */
+    }
+    to {
+        opacity: 1; /* End opaque */
+        transform: translateY(0); /* End at normal position */
+    }
+}
+.footer {
+    background-color: #2c3e50; /* Dark background color */
+    color: white; /* White text color */
+    padding: 40px 20px; /* Padding for spacing */
+    text-align: center; /* Center text */
+    position: relative; /* Position relative for potential absolute positioning */
+    overflow: hidden; /* Prevent overflow for animations */
+}
+
+.footer-title {
+    font-size: 1.8em; /* Font size for the footer title */
+    margin-bottom: 10px; /* Space below the title */
+    animation: fadeInUp 0.5s ease; /* Animation for title */
+}
+
+.footer-text {
+    font-size: 1em; /* Font size for footer text */
+    margin-bottom: 20px; /* Space below text */
+    animation: fadeInUp 0.7s ease; /* Animation for text */
+}
+
+/* Social icons container */
+.social-icons {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px; /* Space between icons */
+    justify-items: center; /* Center icons within their grid cells */
+}
+
+/* Social icon styles */
+.social-icon {
+    display: inline-block; /* Inline block for clickable area */
+    transition: transform 0.3s ease; /* Transition for scaling effect */
+}
+
+.social-icon img {
+    width: 30px; /* Icon width */
+    height: auto; /* Maintain aspect ratio */
+    filter: brightness(0) invert(1); /* Invert colors for visibility on dark background */
+}
+
+/* Hover effects */
+.social-icon:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Start transparent */
+        transform: translateY(10px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1; /* End opaque */
+        transform: translateY(0); /* End at normal position */
+    }
+}
